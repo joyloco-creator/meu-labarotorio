@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -52,28 +53,32 @@
 
         <div id="numero">0</div>
 
+        <p>Total de operações: <strong id="total">0</strong></p>
+
         <button onclick="diminuir()">- Diminuir</button>
-
         <button onclick="adicionar()">+ Adicionar</button>
-
         <button onclick="zerar()">Zerar</button>
 
     </div>
 
     <script>
         let contador = 0;
+        let totalOperacoes = 0;
 
         function atualizarTela() {
             document.getElementById("numero").textContent = contador;
+            document.getElementById("total").textContent = totalOperacoes;
         }
 
         function adicionar() {
             contador++;
+            totalOperacoes++;
             atualizarTela();
         }
 
         function diminuir() {
             contador--;
+            totalOperacoes++;
             atualizarTela();
         }
 
