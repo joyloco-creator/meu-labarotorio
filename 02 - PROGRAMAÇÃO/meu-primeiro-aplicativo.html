@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Primeiro Aplicativo</title>
+
+    <style>
+        body {
+            background: #101827;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .cartao {
+            background: #1e293b;
+            max-width: 400px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        h1 {
+            color: #38bdf8;
+        }
+
+        #numero {
+            font-size: 60px;
+            margin: 25px;
+        }
+
+        button {
+            padding: 12px 18px;
+            margin: 5px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="cartao">
+
+        <h1>Meu Contador</h1>
+
+        <p>Meu primeiro aplicativo interativo</p>
+
+        <div id="numero">0</div>
+
+        <button onclick="diminuir()">- Diminuir</button>
+
+        <button onclick="adicionar()">+ Adicionar</button>
+
+        <button onclick="zerar()">Zerar</button>
+
+    </div>
+
+    <script>
+        let contador = 0;
+
+        function atualizarTela() {
+            document.getElementById("numero").textContent = contador;
+        }
+
+        function adicionar() {
+            contador++;
+            atualizarTela();
+        }
+
+        function diminuir() {
+            contador--;
+            atualizarTela();
+        }
+
+        function zerar() {
+            contador = 0;
+            atualizarTela();
+        }
+    </script>
+
+</body>
+</html>
