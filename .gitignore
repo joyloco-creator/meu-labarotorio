@@ -1,0 +1,22 @@
+# Arquivos temporários do Windows
+Thumbs.db
+Desktop.ini
+
+# Arquivos temporários de editores
+*.tmp
+*.log
+
+# Configurações pessoais do VS Code
+.vscode/
+
+# Dependências de projetos JavaScript
+node_modules/
+
+# Arquivos de ambiente e possíveis segredos
+.env
+.env.*
+!.env.example
+
+# Arquivos Python temporários
+__pycache__/
+*.pyc
